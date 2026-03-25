@@ -1,0 +1,21 @@
+.hero{
+	min-height: 60vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	color: white;
+	background: linear-gradient(180deg, rgba(13,110,253,0.12), rgba(13,110,253,0.08));
+	border-radius: 12px;
+	padding: 40px 20px;
+}
+
+.hero h1{font-size:2rem;margin:0 0 8px}
+.hero p{color:var(--muted);margin:0}
+
+.hero button{margin-top:14px}
+
+@media (max-width:720px){
+	.hero{padding:28px 12px}
+	.hero h1{font-size:1.6rem}
+}

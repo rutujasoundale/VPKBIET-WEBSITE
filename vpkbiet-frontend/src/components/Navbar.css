@@ -1,0 +1,26 @@
+.navbar{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:12px 0;
+	background:transparent;
+}
+
+.nav-left{display:flex;align-items:center;gap:12px}
+.nav-logo{width:48px;height:48px;border-radius:8px;object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,0.12)}
+
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--muted)}
+.nav-links a{padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+.nav-links a.active{background:var(--color-primary);color:white}
+.nav-links a:hover{background:rgba(13,110,253,0.08);color:var(--color-primary)}
+
+@media (max-width:720px){
+  .navbar{flex-direction:column;align-items:flex-start;gap:12px;position:relative}
+  .nav-toggle{display:block}
+  .nav-links{flex-direction:column;gap:10px;font-size:14px;overflow:hidden;max-height:0;transition:max-height 0.3s ease}
+  .nav-links.open{max-height:240px} /* enough for items */
+
+  /* screen reader only */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+}
